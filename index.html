@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day My Love</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?roses,flowers') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .hidden {
+            display: none;
+        }
+        .surprise {
+            margin-top: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+            animation: fadeIn 1s ease-in-out;
+        }
+        #hugMessage {
+            display: none;
+            font-size: 2rem;
+            color: pink;
+            margin-top: 20px;
+            animation: hugAnimation 1s ease-in-out infinite alternate;
+        }
+        #poem {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.8);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes hugAnimation {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Rose Day My Love! 🌹</h1>
+    <p>Roses are red, violets are blue,  
+       My life is beautiful, because of you! 💖</p>
+    
+    <button onclick="showSurprise()">Click for a Surprise</button>
+    <button onclick="sendHug()">Send a Virtual Hug 🤗</button>
+    <button onclick="showPoem()">A Special Poem for You 📜</button>
+
+    <img id="roseImage" class="hidden surprise" src="https://source.unsplash.com/300x300/?red-rose-bouquet" alt="Beautiful Rose Bouquet">
+    <img id="chocolatesImage" class="hidden surprise" src="https://source.unsplash.com/300x300/?chocolates" alt="Delicious Chocolates">
+    <img id="teddyImage" class="hidden surprise" src="https://source.unsplash.com/300x300/?teddy-bear" alt="Cute Teddy Bear">
+    
+    <p id="hugMessage">🤗 Big Warm Virtual Hug for You, My Love! 🤗</p>
+
+    <div id="poem" class="hidden">
+        <p>
+            🌹 My love for you grows like a rose in the sun,<br>
+            Every day with you is a beautiful one.<br>
+            Your smile is my sunshine, your touch is my rain,<br>
+            With you by my side, I’ll never feel pain.<br><br>
+
+            🍫 Like chocolates, you're sweet, a treat so divine,<br>
+            With you in my arms, the world feels just fine.<br>
+            A teddy so cuddly, just like my embrace,<br>
+            Forever and always, my heart’s special place. 💖
+        </p>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById('roseImage').style.display = 'block';
+            document.getElementById('chocolatesImage').style.display = 'block';
+            document.getElementById('teddyImage').style.display = 'block';
+        }
+
+        function sendHug() {
+            document.getElementById('hugMessage').style.display = 'block';
+        }
+
+        function showPoem() {
+            document.getElementById('poem').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
